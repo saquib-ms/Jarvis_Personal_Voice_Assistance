@@ -46,6 +46,8 @@ def searchGoogle(query):
         query = query.replace("jarvis","")
         query = query.replace("google search","")
         query = query.replace("google","")
+        query = query.replace("google it","")
+        query = query.replace("google now","")
         speak("This is what I found on google")
 
     try:

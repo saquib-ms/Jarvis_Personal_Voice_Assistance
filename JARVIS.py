@@ -101,49 +101,22 @@ if __name__ == "__main__":
                 elif 'open microsoft word' in query:
                     npath = "C:\\Program Files\\Microsoft Office\\root\\Office16\\WINWORD.EXE"
                     os.startfile(npath)
-
-
-
-        elif 'open google' in query:
-            webbrowser.open("google.com")
-            break
-
-        elif 'open youtube' in query:
-            webbrowser.open("youtube.com")
-            break
-
-
-
-
-
-        elif "go to sleep" in query:
+                    
+                elif "go to sleep" in query:
                     speak("Ok sir و You can call me anytime")
-                    break            
+                    break
+                    
+                elif 'open stackoverflow' in query:
+                    webbrowser.open("stackoverflow.com")
+                    break   
                 
 
 
+        elif "shutdown" or "shut down" in query:
+            speak("I am happy to assist you sir! I'm going offline.")
+            break
+
+
         
 
 
-
-        # Logic for executing tasks based on query
-        if 'wikipedia' in query:
-            speak('Searching Wikipedia...')
-            query = query.replace("wikipedia", "")
-            results = wikipedia.summary(query, sentences=2)
-            speak("According to Wikipedia")
-            print(results)
-            speak(results)
-       
-
-        elif 'open stackoverflow' in query:
-            webbrowser.open("stackoverflow.com")   
-
-
-        elif 'play music' in query:
-            music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
-            songs = os.listdir(music_dir)
-            print(songs)    
-            os.startfile(os.path.join(music_dir, songs[0]))
-
-        
